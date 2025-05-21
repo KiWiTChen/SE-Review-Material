@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java习题答案.iml" filepath="$PROJECT_DIR$/Java习题答案.iml" />
+      <module fileurl="file://$PROJECT_DIR$/习题答案 第05章/习题答案 第05章.iml" filepath="$PROJECT_DIR$/习题答案 第05章/习题答案 第05章.iml" />
+      <module fileurl="file://$PROJECT_DIR$/习题答案 第06章/习题答案 第06章.iml" filepath="$PROJECT_DIR$/习题答案 第06章/习题答案 第06章.iml" />
+      <module fileurl="file://$PROJECT_DIR$/习题答案 第12章/习题答案 第12章.iml" filepath="$PROJECT_DIR$/习题答案 第12章/习题答案 第12章.iml" />
+    </modules>
+  </component>
+</project>

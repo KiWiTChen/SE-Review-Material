@@ -1,0 +1,23 @@
+flex rdlex.l 生成lex.yy.c
+
+gcc -o scan rdparser1.c lex.yy.c 生成scan
+
+./scan 
+
+预期结果：扫描expr.txt 后输出
+tok: 5
+tok: -
+tok: 9
+tok: *
+tok: 6
+tok: +
+tok: 3
+tok: 
+
+expr '+'
+  expr '-'
+    intValue 5
+    expr '*'
+      intValue 9
+      intValue 6
+  intValue 3
