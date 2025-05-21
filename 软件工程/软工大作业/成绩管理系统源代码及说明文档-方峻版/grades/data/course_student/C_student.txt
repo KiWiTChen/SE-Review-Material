@@ -1,0 +1,3 @@
+2 C a jack m 2020.1.2 computer software
+2 C a1 jack1 m 2000.1.1 computer software
+2 C a2 jack2 m 2000.1.1 computer software
