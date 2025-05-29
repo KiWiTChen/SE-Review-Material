@@ -1,0 +1,3 @@
+Dependencies for Project 'E1', Target 'Target 1': (DO NOT MODIFY !)
+F (.\S3C2440.s)(0x559CDAC4)(--cpu ARM920T -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Samsung--pd "__UVISION_VERSION SETA 524"--list .\listings\s3c2440.lst --xref -o .\objects\s3c2440.o --depend .\objects\s3c2440.d)
+F (.\MYTEST.s)(0x67F524C5)(--cpu ARM920T -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-IC:\Keil_v5\ARM\INC\Samsung--pd "__UVISION_VERSION SETA 524"--list .\listings\mytest.lst --xref -o .\objects\mytest.o --depend .\objects\mytest.d)

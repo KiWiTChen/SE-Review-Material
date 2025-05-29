@@ -1,0 +1,79 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             test,CODE,READONLY
+    2 00000000                 ENTRY
+    3 00000000         Beg
+    4 00000000 E59F1020        LDR              R1,=0xEEEEEEEE
+    5 00000004 E59F2020        LDR              R2,=0xAAAAAAAA
+    6 00000008 E0913002        ADDS             R3, R1, R2
+    7 0000000C EAFFFFFF        B                Next
+    8 00000010         LTORG
+    9 00000010         Next
+   10 00000010 E59F4018        LDR              R4,=0xDDDDDDDD
+   11 00000014 E59F5018        LDR              R5,=0xBBBBBBBB
+   12 00000018 E0946005        ADDS             R6, R4, R5
+   13 0000001C EAFFFFF7        B                Beg
+   14 00000020         StrMem
+   15 00000020 77777777 
+              CCCCCCCC         DCD              0x77777777,0xCCCCCCCC
+   16 00000028                 END
+              EEEEEEEE 
+              AAAAAAAA 
+              DDDDDDDD 
+              BBBBBBBB 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM920T --apcs=interwor
+k --depend=.\objects\mytest.d -o.\objects\mytest.o -IC:\Keil_v5\ARM\RV31\INC -I
+C:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\INC\Samsung --predefine="__UVISIO
+N_VERSION SETA 524" --list=.\listings\mytest.lst MYTEST.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Beg 00000000
+
+Symbol: Beg
+   Definitions
+      At line 3 in file MYTEST.s
+   Uses
+      At line 13 in file MYTEST.s
+Comment: Beg used once
+LTORG 00000010
+
+Symbol: LTORG
+   Definitions
+      At line 8 in file MYTEST.s
+   Uses
+      None
+Comment: LTORG unused
+Next 00000010
+
+Symbol: Next
+   Definitions
+      At line 9 in file MYTEST.s
+   Uses
+      At line 7 in file MYTEST.s
+Comment: Next used once
+StrMem 00000020
+
+Symbol: StrMem
+   Definitions
+      At line 14 in file MYTEST.s
+   Uses
+      None
+Comment: StrMem unused
+test 00000000
+
+Symbol: test
+   Definitions
+      At line 1 in file MYTEST.s
+   Uses
+      None
+Comment: test unused
+5 symbols
+338 symbols in table
