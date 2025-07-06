@@ -1,0 +1,128 @@
+第一部分：路由器R1配置
+en
+
+conf term
+
+no ip domain lookup
+
+hostname R1
+
+banner motd %Unauthorized Access is Prohibited!%
+
+line console 0
+
+password C@nsPassw!
+
+login
+
+exit
+
+int g0/0/0
+
+description LAN 2 
+
+ip address 209.165.201.33 255.255.255.224
+
+no shutdown
+
+int g0/0/1
+
+description LAN 1
+
+ip address 209.165.201.1 255.255.255.224
+
+exit
+
+exit
+
+show ip interface brief
+
+
+
+
+
+
+第二部分：交换机S1配置
+en
+
+conf term
+
+no ip domain lookup
+
+hostname S1
+
+banner motd %Unauthorized Access is Prohibited!%
+
+line console 0
+
+password C@nsPassw!
+
+login
+
+exit
+
+int vlan 1
+
+description LAN 1 Switch
+
+ip address 209.165.201.2 255.255.255.224
+
+no shutdown
+
+exit
+
+ip default-gateway 209.165.201.1
+
+show running-config
+
+
+## 第三部分：路由器R1安全配置
+
+enable secret NoOneShouldKnow
+
+service password-encryption
+
+security passwords min-length 10
+
+ip domain-name netsec.com
+
+username netadmin secret Ci$co12345
+
+line vty 0 15
+
+login local
+
+transport input ssh
+
+exit
+
+crypto key generate rsa general-keys modulus 1024
+
+
+第四部分：交换机S1安全配置
+
+enable secret NoOneShouldKnow
+
+service password-encryption
+
+ip domain-name netsec.com
+
+username netadmin secret Ci$co12345
+
+line vty 0 15
+
+login local
+
+transport input ssh
+
+exit
+
+crypto key generate rsa general-keys modulus 1024
+
+int range f0/1-4,f0/7-24,g0/1-2
+
+shutdown
+
+description Shutdown by Admin
+
+exit
